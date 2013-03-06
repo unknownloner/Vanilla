@@ -35,7 +35,8 @@ import gnu.trove.map.TObjectIntMap;
 import gnu.trove.map.hash.TObjectIntHashMap;
 
 import org.spout.api.inventory.ItemStack;
-import org.spout.api.math.GenericMath;
+
+import org.spout.math.GenericMath;
 
 import org.spout.nbt.CompoundMap;
 import org.spout.nbt.CompoundTag;

@@ -34,7 +34,8 @@ import org.spout.api.inventory.Slot;
 import org.spout.api.material.Placeable;
 import org.spout.api.material.block.BlockFace;
 import org.spout.api.material.source.DataSource;
-import org.spout.api.math.Vector3;
+
+import org.spout.math.Vector3;
 
 import org.spout.vanilla.component.entity.living.passive.Sheep;
 import org.spout.vanilla.material.VanillaMaterials;

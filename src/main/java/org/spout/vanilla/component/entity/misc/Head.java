@@ -29,11 +29,12 @@ package org.spout.vanilla.component.entity.misc;
 import org.spout.api.component.type.EntityComponent;
 import org.spout.api.geo.discrete.Point;
 import org.spout.api.geo.discrete.Transform;
-import org.spout.api.math.Quaternion;
-import org.spout.api.math.QuaternionMath;
-import org.spout.api.math.Vector3;
-import org.spout.api.math.VectorMath;
 import org.spout.api.util.BlockIterator;
+
+import org.spout.math.Quaternion;
+import org.spout.math.QuaternionMath;
+import org.spout.math.Vector3;
+import org.spout.math.VectorMath;
 
 import org.spout.vanilla.data.VanillaData;
 

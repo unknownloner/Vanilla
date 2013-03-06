@@ -30,10 +30,10 @@ import java.util.Random;
 
 import gnu.trove.map.TObjectIntMap;
 
-import org.spout.api.math.GenericMath;
-import org.spout.api.math.TrigMath;
-import org.spout.api.math.Vector3;
-import org.spout.api.math.VectorMath;
+import org.spout.math.GenericMath;
+import org.spout.math.TrigMath;
+import org.spout.math.Vector3;
+import org.spout.math.VectorMath;
 
 public class MathHelper {
 	/**

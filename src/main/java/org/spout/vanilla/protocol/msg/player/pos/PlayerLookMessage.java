@@ -28,9 +28,10 @@ package org.spout.vanilla.protocol.msg.player.pos;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
-import org.spout.api.math.Quaternion;
-import org.spout.api.math.QuaternionMath;
 import org.spout.api.util.SpoutToStringStyle;
+
+import org.spout.math.Quaternion;
+import org.spout.math.QuaternionMath;
 
 import org.spout.vanilla.protocol.msg.VanillaMainChannelMessage;
 

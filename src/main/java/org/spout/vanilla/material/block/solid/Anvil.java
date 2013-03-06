@@ -26,7 +26,6 @@
  */
 package org.spout.vanilla.material.block.solid;
 
-import org.spout.api.Spout;
 import org.spout.api.entity.Entity;
 import org.spout.api.entity.Player;
 import org.spout.api.event.Cause;
@@ -35,7 +34,8 @@ import org.spout.api.geo.cuboid.Block;
 import org.spout.api.material.BlockMaterial;
 import org.spout.api.material.block.BlockFace;
 import org.spout.api.material.block.BlockFaces;
-import org.spout.api.math.Vector3;
+
+import org.spout.math.Vector3;
 
 import org.spout.vanilla.component.entity.inventory.WindowHolder;
 import org.spout.vanilla.data.resources.VanillaMaterialModels;

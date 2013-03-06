@@ -38,7 +38,8 @@ import net.royawesome.jlibnoise.module.source.Perlin;
 
 import org.spout.api.generator.biome.selector.BiomeSelectorLayer;
 import org.spout.api.generator.biome.selector.LayeredBiomeSelectorElement;
-import org.spout.api.math.Vector2;
+
+import org.spout.math.Vector2;
 
 public class WhittakerLayer implements BiomeSelectorLayer {
 	private final Perlin temperaturePerlin = new Perlin();

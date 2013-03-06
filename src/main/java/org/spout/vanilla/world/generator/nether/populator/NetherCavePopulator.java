@@ -29,11 +29,12 @@ package org.spout.vanilla.world.generator.nether.populator;
 import java.util.Random;
 
 import org.spout.api.material.BlockMaterial;
-import org.spout.api.math.GenericMath;
-import org.spout.api.math.TrigMath;
-import org.spout.api.math.Vector3;
-import org.spout.api.math.VectorMath;
 import org.spout.api.util.cuboid.CuboidBlockMaterialBuffer;
+
+import org.spout.math.GenericMath;
+import org.spout.math.TrigMath;
+import org.spout.math.Vector3;
+import org.spout.math.VectorMath;
 
 import org.spout.vanilla.material.VanillaMaterials;
 import org.spout.vanilla.material.block.liquid.Lava;

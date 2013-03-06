@@ -27,8 +27,9 @@
 package org.spout.vanilla.material.item;
 
 import org.spout.api.material.Material;
-import org.spout.api.math.Vector2;
 import org.spout.api.render.RenderMaterial;
+
+import org.spout.math.Vector2;
 
 import org.spout.vanilla.data.VanillaRenderMaterials;
 import org.spout.vanilla.material.VanillaMaterial;

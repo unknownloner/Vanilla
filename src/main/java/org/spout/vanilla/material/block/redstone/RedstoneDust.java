@@ -27,7 +27,7 @@
 package org.spout.vanilla.material.block.redstone;
 
 import org.spout.api.material.BlockMaterial;
-import org.spout.api.math.Vector2;
+import org.spout.math.Vector2;
 
 import org.spout.vanilla.material.PotionReagent;
 import org.spout.vanilla.material.item.BlockItem;

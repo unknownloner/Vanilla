@@ -29,7 +29,8 @@ package org.spout.vanilla.component.entity.player;
 import org.spout.api.chat.style.ChatStyle;
 import org.spout.api.component.type.EntityComponent;
 import org.spout.api.entity.Player;
-import org.spout.api.math.GenericMath;
+
+import org.spout.math.GenericMath;
 
 import org.spout.vanilla.event.player.network.PlayerPingEvent;
 

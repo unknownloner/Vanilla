@@ -36,7 +36,8 @@ import java.util.Set;
 
 import org.spout.api.geo.World;
 import org.spout.api.geo.discrete.Point;
-import org.spout.api.math.Quaternion;
+
+import org.spout.math.Quaternion;
 
 import org.spout.vanilla.world.generator.structure.Structure;
 import org.spout.vanilla.world.generator.structure.StructurePiece;

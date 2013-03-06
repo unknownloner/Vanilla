@@ -26,7 +26,7 @@
  */
 package org.spout.vanilla.material.item.armor.gold;
 
-import org.spout.api.math.Vector2;
+import org.spout.math.Vector2;
 
 import org.spout.vanilla.material.item.armor.Armor;
 

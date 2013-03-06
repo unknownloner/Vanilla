@@ -27,7 +27,8 @@
 package org.spout.vanilla.material.item.armor;
 
 import org.spout.api.inventory.ItemStack;
-import org.spout.api.math.Vector2;
+
+import org.spout.math.Vector2;
 
 import org.spout.vanilla.event.cause.DamageCause;
 import org.spout.vanilla.event.cause.DamageCause.DamageType;

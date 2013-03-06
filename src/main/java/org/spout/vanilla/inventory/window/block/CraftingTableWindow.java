@@ -29,7 +29,8 @@ package org.spout.vanilla.inventory.window.block;
 import org.spout.api.entity.Player;
 import org.spout.api.inventory.ItemStack;
 import org.spout.api.inventory.util.GridIterator;
-import org.spout.api.math.Vector2;
+
+import org.spout.math.Vector2;
 
 import org.spout.vanilla.inventory.block.CraftingTableInventory;
 import org.spout.vanilla.inventory.util.InventoryConverter;

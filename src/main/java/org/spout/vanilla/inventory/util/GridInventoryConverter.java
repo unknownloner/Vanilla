@@ -31,7 +31,8 @@ import org.spout.api.inventory.Inventory;
 import org.spout.api.inventory.Slot;
 import org.spout.api.inventory.shape.Grid;
 import org.spout.api.inventory.util.GridIterator;
-import org.spout.api.math.Vector2;
+
+import org.spout.math.Vector2;
 
 import org.spout.vanilla.VanillaPlugin;
 import org.spout.vanilla.inventory.window.gui.RenderSlot;

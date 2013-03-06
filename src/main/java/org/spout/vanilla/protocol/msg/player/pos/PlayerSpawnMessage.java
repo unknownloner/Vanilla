@@ -30,9 +30,10 @@ import java.util.List;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
-import org.spout.api.math.Vector3;
 import org.spout.api.util.Parameter;
 import org.spout.api.util.SpoutToStringStyle;
+
+import org.spout.math.Vector3;
 
 import org.spout.vanilla.protocol.msg.entity.EntityMessage;
 

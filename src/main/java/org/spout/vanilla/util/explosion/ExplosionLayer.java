@@ -29,8 +29,8 @@ package org.spout.vanilla.util.explosion;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.spout.api.math.GenericMath;
-import org.spout.api.math.Vector3;
+import org.spout.math.GenericMath;
+import org.spout.math.Vector3;
 
 public class ExplosionLayer {
 	public ExplosionLayer(final ExplosionModelSpherical model) {

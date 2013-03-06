@@ -29,7 +29,7 @@
 import org.junit.Test;
 
 import org.spout.api.inventory.Inventory;
-import org.spout.api.math.Vector2;
+import org.spout.math.Vector2;
 
 import static org.junit.Assert.assertEquals;
 

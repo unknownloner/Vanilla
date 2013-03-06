@@ -27,8 +27,9 @@
 package org.spout.vanilla.material;
 
 import org.spout.api.material.source.MaterialSource;
-import org.spout.api.math.Vector2;
 import org.spout.api.render.RenderMaterial;
+
+import org.spout.math.Vector2;
 
 public interface VanillaMaterial extends MaterialSource {
 	/**

@@ -30,9 +30,10 @@ import java.util.Random;
 
 import org.spout.api.geo.World;
 import org.spout.api.material.BlockMaterial;
-import org.spout.api.math.TrigMath;
-import org.spout.api.math.Vector2;
-import org.spout.api.math.VectorMath;
+
+import org.spout.math.TrigMath;
+import org.spout.math.Vector2;
+import org.spout.math.VectorMath;
 
 import org.spout.vanilla.material.VanillaMaterials;
 import org.spout.vanilla.world.generator.object.RandomObject;
