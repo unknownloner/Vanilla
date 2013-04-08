@@ -43,8 +43,7 @@ public abstract class RailBase extends GroundAttachable {
 		super(name, id, null);
 		this.setLiquidObstacle(false).setHardness(0.7F).setResistance(1.2F).setTransparent().setCollision(CollisionStrategy.NOCOLLIDE);
 
-		BoundingBox bb = new BoundingBox(0.0f, 0.0f, 0.0f, 1.0f, 0.125f, 1.0f);
-		getCollisionModel().setArea(bb);
+		setVolume(new BoundingBox(0.0f, 0.0f, 0.0f, 1.0f, 0.125f, 1.0f));
 	}
 
 	/**
