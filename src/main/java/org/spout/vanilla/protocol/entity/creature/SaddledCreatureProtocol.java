@@ -31,19 +31,19 @@ import java.util.List;
 import org.spout.api.entity.Entity;
 import org.spout.api.util.Parameter;
 
-import org.spout.vanilla.component.entity.misc.Health;
+import org.spout.vanilla.component.entity.living.passive.Pig;
 
-public class WitherEntityProtocol extends CreatureProtocol {
-	public final static int HEALTH_INDEX = 16; // The MC metadata index to determine the Wither's health
+public abstract class SaddledCreatureProtocol extends CreatureProtocol {
+	public final static int SADDLE_INDEX = 16; // The MC metadata index for determining if the pig is saddled or not.
 
-	public WitherEntityProtocol() {
-		super(CreatureType.WITHER);
+	public SaddledCreatureProtocol(CreatureType type) {
+		super(type);
 	}
 
 	@Override
 	public List<Parameter<?>> getSpawnParameters(Entity entity) {
 		List<Parameter<?>> parameters = super.getSpawnParameters(entity);
-		parameters.add(new Parameter<Integer>(Parameter.TYPE_INT, HEALTH_INDEX, (int)entity.add(Health.class).getHealth()));
+		parameters.add(new Parameter<Byte>(Parameter.TYPE_BYTE, SADDLE_INDEX, (byte) (entity.add(Pig.class).isSaddled() ? 1 : 0)));
 		return parameters;
 	}
 }

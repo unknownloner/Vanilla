@@ -24,26 +24,21 @@
  * License and see <http://spout.in/licensev1> for the full license, including
  * the MIT license.
  */
-package org.spout.vanilla.protocol.entity.creature;
+package org.spout.vanilla.component.entity.living.passive;
 
-import java.util.List;
-
-import org.spout.api.entity.Entity;
-import org.spout.api.util.Parameter;
-
+import org.spout.vanilla.VanillaPlugin;
+import org.spout.vanilla.component.entity.living.Passive;
+import org.spout.vanilla.component.entity.living.SaddledAnimal;
 import org.spout.vanilla.component.entity.misc.Health;
+import org.spout.vanilla.protocol.entity.creature.HorseEntityProtocol;
 
-public class WitherEntityProtocol extends CreatureProtocol {
-	public final static int HEALTH_INDEX = 16; // The MC metadata index to determine the Wither's health
-
-	public WitherEntityProtocol() {
-		super(CreatureType.WITHER);
-	}
+public class Horse extends SaddledAnimal implements Passive {
 
 	@Override
-	public List<Parameter<?>> getSpawnParameters(Entity entity) {
-		List<Parameter<?>> parameters = super.getSpawnParameters(entity);
-		parameters.add(new Parameter<Integer>(Parameter.TYPE_INT, HEALTH_INDEX, (int)entity.add(Health.class).getHealth()));
-		return parameters;
+	public void onAttached() {
+		getOwner().getNetwork().setEntityProtocol(VanillaPlugin.VANILLA_PROTOCOL_ID, new HorseEntityProtocol());
+		if (getAttachedCount() == 1) {
+			getOwner().add(Health.class).setSpawnHealth(22);
+		}
 	}
 }

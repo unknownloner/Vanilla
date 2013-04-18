@@ -39,10 +39,10 @@ import org.spout.vanilla.event.cause.HealthChangeCause;
  */
 public class EntityHealthChangeEvent extends EntityEvent implements Cancellable {
 	private static final HandlerList handlers = new HandlerList();
-	private int change;
+	private float change;
 	private final HealthChangeCause cause;
 
-	public EntityHealthChangeEvent(Entity e, HealthChangeCause cause, int change) {
+	public EntityHealthChangeEvent(Entity e, HealthChangeCause cause, float change) {
 		super(e);
 		this.cause = cause;
 		this.change = change;
@@ -60,7 +60,7 @@ public class EntityHealthChangeEvent extends EntityEvent implements Cancellable 
 	 * Gets the change in health.
 	 * @return The amount of change.
 	 */
-	public int getChange() {
+	public float getChange() {
 		return change;
 	}
 

@@ -109,7 +109,7 @@ public class EntityDamageEvent extends EntityHealthChangeEvent {
 	 * Gets the damage dealt to the health component.
 	 * @return The damage to the health component.
 	 */
-	public int getDamage() {
+	public float getDamage() {
 		return -getChange();
 	}
 

@@ -50,8 +50,8 @@ public class PlayerAbilityCodec extends MessageCodec<PlayerAbilityMessage> {
 		flag = LogicUtil.setBit(flag, 0x4, message.canFly());
 		flag = LogicUtil.setBit(flag, 0x8, message.isCreativeMode());
 		buffer.writeByte(flag);
-		buffer.writeByte(message.getFlyingSpeed());
-		buffer.writeByte(message.getWalkingSpeed());
+		buffer.writeFloat(message.getFlyingSpeed());
+		buffer.writeFloat(message.getWalkingSpeed());
 		return buffer;
 	}
 
@@ -62,8 +62,8 @@ public class PlayerAbilityCodec extends MessageCodec<PlayerAbilityMessage> {
 		boolean isFlying = LogicUtil.getBit(flag, 0x2);
 		boolean canFly = LogicUtil.getBit(flag, 0x4);
 		boolean creativeMode = LogicUtil.getBit(flag, 0x8);
-		byte flyingSpeed = buffer.readByte();
-		byte walkingSpeed = buffer.readByte();
+		float flyingSpeed = buffer.readFloat();
+		float walkingSpeed = buffer.readFloat();
 		return new PlayerAbilityMessage(godMode, isFlying, canFly, creativeMode, flyingSpeed, walkingSpeed);
 	}
 }

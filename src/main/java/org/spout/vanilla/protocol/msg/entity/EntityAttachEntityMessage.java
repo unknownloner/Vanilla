@@ -35,11 +35,12 @@ import org.spout.api.util.SpoutToStringStyle;
 import org.spout.vanilla.protocol.proxy.VanillaConnectionInfo;
 
 public final class EntityAttachEntityMessage extends EntityMessage {
-	private int vehicle;
+	private int vehicle, unknown;
 
-	public EntityAttachEntityMessage(int id, int vehicle) {
+	public EntityAttachEntityMessage(int id, int vehicle, int unknown) {
 		super(id);
 		this.vehicle = vehicle;
+		this.unknown = unknown;
 	}
 
 	@Override
@@ -51,6 +52,10 @@ public final class EntityAttachEntityMessage extends EntityMessage {
 			vehicle = ((VanillaConnectionInfo) info).getEntityId();
 		}
 		return this;
+	}
+
+	public int getUnknown() {
+		return unknown;
 	}
 
 	public int getVehicle() {

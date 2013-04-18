@@ -63,7 +63,7 @@ public class EntityHealEvent extends EntityHealthChangeEvent {
 	 * Gets the heal to be applied to the health component.
 	 * @return The damage to the health component.
 	 */
-	public int getHealAmount() {
+	public float getHealAmount() {
 		return getChange();
 	}
 

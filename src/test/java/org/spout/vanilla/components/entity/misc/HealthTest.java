@@ -46,22 +46,22 @@ public class HealthTest {
 		Health health = entity.add(Health.class);
 
 		health.setMaxHealth(15);
-		assertEquals(15, health.getMaxHealth());
-		assertEquals(1, health.getHealth());
+		assertEquals(15, health.getMaxHealth(), 0f);
+		assertEquals(1, health.getHealth(), 0f);
 
 		health.setSpawnHealth(20);
-		assertEquals(20, health.getMaxHealth());
-		assertEquals(20, health.getHealth());
+		assertEquals(20, health.getMaxHealth(), 0f);
+		assertEquals(20, health.getHealth(), 0f);
 
 		health.damage(1);
-		assertEquals(19, health.getHealth());
+		assertEquals(19, health.getHealth(), 0f);
 
 		health.kill(HealthChangeCause.DAMAGE);
-		assertEquals(0, health.getHealth());
+		assertEquals(0, health.getHealth(), 0f);
 		assertTrue(health.isDead());
 
 		health.heal(5);
-		assertEquals(5, health.getHealth());
+		assertEquals(5, health.getHealth(), 0f);
 		assertFalse(health.isDead());
 
 		health.setDeathTicks(30);

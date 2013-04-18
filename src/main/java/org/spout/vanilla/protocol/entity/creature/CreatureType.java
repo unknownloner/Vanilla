@@ -52,6 +52,7 @@ import org.spout.vanilla.component.entity.living.neutral.PigZombie;
 import org.spout.vanilla.component.entity.living.neutral.Wolf;
 import org.spout.vanilla.component.entity.living.passive.Chicken;
 import org.spout.vanilla.component.entity.living.passive.Cow;
+import org.spout.vanilla.component.entity.living.passive.Horse;
 import org.spout.vanilla.component.entity.living.passive.MooshroomCow;
 import org.spout.vanilla.component.entity.living.passive.Ocelot;
 import org.spout.vanilla.component.entity.living.passive.Pig;
@@ -89,7 +90,8 @@ public enum CreatureType {
 	WITCH(66, Witch.class, "Witch"),
 	WITHER(64, Wither.class, "WitherBoss"),
 	WOLF(95, Wolf.class, "Wolf"),
-	ZOMBIE(54, Zombie.class, "Zombie");
+	ZOMBIE(54, Zombie.class, "Zombie"),
+	HORSE(100, Horse.class, "Horse");
 	private final int id;
 	private final Class<? extends Living> componentType;
 	private final String name;

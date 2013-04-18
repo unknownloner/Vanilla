@@ -97,7 +97,7 @@ public class Hunger extends EntityComponent {
 			case PROXY:
 			case SERVER:
 				final Health healthComponent = human.getHealth();
-				final int health = healthComponent.getHealth();
+				final float health = healthComponent.getHealth();
 				final int hunger = getHunger();
 
 				//Timer when eating. Sends a Enting done if the player eated the food the whole time.

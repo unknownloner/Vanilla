@@ -35,6 +35,7 @@ import org.spout.vanilla.ai.goal.FollowMaterialHolderGoal;
 import org.spout.vanilla.ai.sensor.NearbyMaterialHolderSensor;
 import org.spout.vanilla.component.entity.living.Animal;
 import org.spout.vanilla.component.entity.living.Passive;
+import org.spout.vanilla.component.entity.living.SaddledAnimal;
 import org.spout.vanilla.component.entity.misc.DeathDrops;
 import org.spout.vanilla.component.entity.misc.Health;
 import org.spout.vanilla.data.VanillaData;
@@ -44,7 +45,7 @@ import org.spout.vanilla.protocol.entity.creature.PigEntityProtocol;
 /**
  * A component that identifies the entity as a Pig.
  */
-public class Pig extends Animal implements Passive {
+public class Pig extends SaddledAnimal implements Passive {
 	@Override
 	public void onAttached() {
 		super.onAttached();
@@ -63,12 +64,4 @@ public class Pig extends Animal implements Passive {
 		getAI().registerAction(new FollowMaterialHolderAction(getAI()));
 	}
 
-	public boolean isSaddled() {
-		return getOwner().getData().get(VanillaData.SADDLED);
-	}
-
-	public void setSaddled(boolean saddled) {
-		getOwner().getData().put(VanillaData.SADDLED, saddled);
-		setMetadata(new Parameter<Byte>(Parameter.TYPE_BYTE, 16, saddled ? (byte) 1 : 0));
-	}
 }

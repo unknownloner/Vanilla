@@ -26,24 +26,9 @@
  */
 package org.spout.vanilla.protocol.entity.creature;
 
-import java.util.List;
+public class HorseEntityProtocol extends CreatureProtocol{
 
-import org.spout.api.entity.Entity;
-import org.spout.api.util.Parameter;
-
-import org.spout.vanilla.component.entity.misc.Health;
-
-public class WitherEntityProtocol extends CreatureProtocol {
-	public final static int HEALTH_INDEX = 16; // The MC metadata index to determine the Wither's health
-
-	public WitherEntityProtocol() {
-		super(CreatureType.WITHER);
-	}
-
-	@Override
-	public List<Parameter<?>> getSpawnParameters(Entity entity) {
-		List<Parameter<?>> parameters = super.getSpawnParameters(entity);
-		parameters.add(new Parameter<Integer>(Parameter.TYPE_INT, HEALTH_INDEX, (int)entity.add(Health.class).getHealth()));
-		return parameters;
+	public HorseEntityProtocol() {
+		super(CreatureType.HORSE);
 	}
 }

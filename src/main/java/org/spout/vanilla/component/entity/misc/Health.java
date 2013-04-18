@@ -298,7 +298,7 @@ public class Health extends EntityComponent {
 	 * Gets the maximum health this entity can have
 	 * @return the maximum health
 	 */
-	public int getMaxHealth() {
+	public float getMaxHealth() {
 		return getData().get(VanillaData.MAX_HEALTH);
 	}
 
@@ -306,7 +306,7 @@ public class Health extends EntityComponent {
 	 * Sets the maximum health this entity can have
 	 * @param maxHealth to set to
 	 */
-	public void setMaxHealth(int maxHealth) {
+	public void setMaxHealth(float maxHealth) {
 		getData().put(VanillaData.MAX_HEALTH, maxHealth);
 	}
 
@@ -314,7 +314,7 @@ public class Health extends EntityComponent {
 	 * Sets the initial maximum health and sets the health to this value
 	 * @param maxHealth of this health component
 	 */
-	public void setSpawnHealth(int maxHealth) {
+	public void setSpawnHealth(float maxHealth) {
 		this.setMaxHealth(maxHealth);
 		//Do not call setHealth yet, network has not been initialized if loading from file
 		getData().put(VanillaData.HEALTH, maxHealth);
@@ -324,7 +324,7 @@ public class Health extends EntityComponent {
 	 * Gets the health of this entity (hitpoints)
 	 * @return the health value
 	 */
-	public int getHealth() {
+	public float getHealth() {
 		return getData().get(VanillaData.HEALTH);
 	}
 
@@ -333,7 +333,7 @@ public class Health extends EntityComponent {
 	 * @param health hitpoints value to set to
 	 * @param cause of the change
 	 */
-	public void setHealth(int health, HealthChangeCause cause) {
+	public void setHealth(float health, HealthChangeCause cause) {
 		EntityHealthChangeEvent event = new EntityHealthChangeEvent(getOwner(), cause, health - getHealth());
 		getEngine().getEventManager().callEvent(event);
 		if (!event.isCancelled()) {

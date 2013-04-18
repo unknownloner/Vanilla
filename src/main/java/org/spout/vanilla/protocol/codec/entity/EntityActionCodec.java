@@ -44,14 +44,16 @@ public final class EntityActionCodec extends MessageCodec<EntityActionMessage> {
 	public EntityActionMessage decode(ChannelBuffer buffer) throws IOException {
 		int id = buffer.readInt();
 		int action = buffer.readUnsignedByte();
-		return new EntityActionMessage(id, action);
+		int unknown = buffer.readInt();
+		return new EntityActionMessage(id, action, unknown);
 	}
 
 	@Override
 	public ChannelBuffer encode(EntityActionMessage message) throws IOException {
-		ChannelBuffer buffer = ChannelBuffers.buffer(5);
+		ChannelBuffer buffer = ChannelBuffers.buffer(13);
 		buffer.writeInt(message.getEntityId());
 		buffer.writeByte(message.getAction());
+		buffer.writeInt(message.getUnknown());
 		return buffer;
 	}
 }

@@ -253,10 +253,10 @@ public class Human extends Living {
 		return getOwner().getData().get(VanillaData.IS_FLYING);
 	}
 
-	public void setFlyingSpeed(byte speed, boolean updateClient) {
+	public void setFlyingSpeed(float speed, boolean updateClient) {
 		Number value = getOwner().getData().put(VanillaData.FLYING_SPEED, speed);
 
-		byte previous = value == null ? VanillaData.FLYING_SPEED.getDefaultValue().byteValue() : value.byteValue();
+		float previous = value == null ? VanillaData.FLYING_SPEED.getDefaultValue().floatValue() : value.floatValue();
 
 		if (callAbilityChangeEvent().isCancelled()) {
 			getOwner().getData().put(VanillaData.FLYING_SPEED, previous);
@@ -273,8 +273,8 @@ public class Human extends Living {
 		return getOwner().getData().get(VanillaData.FLYING_SPEED).byteValue();
 	}
 
-	public void setWalkingSpeed(byte speed, boolean updateClient) {
-		byte previous = getOwner().getData().put(VanillaData.WALKING_SPEED, speed).byteValue();
+	public void setWalkingSpeed(float speed, boolean updateClient) {
+		float previous = getOwner().getData().put(VanillaData.WALKING_SPEED, speed).floatValue();
 		if (callAbilityChangeEvent().isCancelled()) {
 			getOwner().getData().put(VanillaData.WALKING_SPEED, previous);
 			return;

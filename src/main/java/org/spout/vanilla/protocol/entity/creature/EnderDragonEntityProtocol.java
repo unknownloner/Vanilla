@@ -43,7 +43,7 @@ public class EnderDragonEntityProtocol extends CreatureProtocol {
 	@Override
 	public List<Parameter<?>> getSpawnParameters(Entity entity) {
 		List<Parameter<?>> parameters = super.getSpawnParameters(entity);
-		parameters.add(new Parameter<Integer>(Parameter.TYPE_INT, HEALTH_INDEX, entity.add(Health.class).getHealth()));
+		parameters.add(new Parameter<Integer>(Parameter.TYPE_INT, HEALTH_INDEX, (int) entity.add(Health.class).getHealth())); //TODO: Temp fix
 		return parameters;
 	}
 }
