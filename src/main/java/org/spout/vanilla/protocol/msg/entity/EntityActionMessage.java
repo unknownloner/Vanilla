@@ -36,7 +36,8 @@ public final class EntityActionMessage extends EntityMessage {
 	public static final int ACTION_LEAVE_BED = 3;
 	public static final int ACTION_START_SPRINTING = 4;
 	public static final int ACTION_STOP_SPRINTING = 5;
-	private final int action, unknown;
+	private final int action;
+	private final int unknown;
 
 	public EntityActionMessage(int id, int action, int unknown) {
 		super(id);

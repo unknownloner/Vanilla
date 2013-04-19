@@ -30,6 +30,7 @@ import org.spout.vanilla.VanillaPlugin;
 import org.spout.vanilla.component.entity.living.Passive;
 import org.spout.vanilla.component.entity.living.SaddledAnimal;
 import org.spout.vanilla.component.entity.misc.Health;
+import org.spout.vanilla.data.VanillaData;
 import org.spout.vanilla.protocol.entity.creature.HorseEntityProtocol;
 
 public class Horse extends SaddledAnimal implements Passive {
@@ -39,6 +40,24 @@ public class Horse extends SaddledAnimal implements Passive {
 		getOwner().getNetwork().setEntityProtocol(VanillaPlugin.VANILLA_PROTOCOL_ID, new HorseEntityProtocol());
 		if (getAttachedCount() == 1) {
 			getOwner().add(Health.class).setSpawnHealth(22);
+		}
+	}
+
+	public boolean isTamed() {
+		return getOwner().getData().get(VanillaData.TAMED);
+	}
+
+	public void setTamed(boolean tamed) {
+		getOwner().getData().put(VanillaData.TAMED, tamed);
+	}
+
+	public String getOwnerName() {
+		return getOwner().getData().get(VanillaData.OWNER);
+	}
+
+	public void setOwnerName(String owner) {
+		if (isTamed()) {
+			getOwner().getData().put(VanillaData.OWNER, owner);
 		}
 	}
 }

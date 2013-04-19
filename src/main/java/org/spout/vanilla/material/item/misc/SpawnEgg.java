@@ -52,6 +52,7 @@ import org.spout.vanilla.component.entity.living.neutral.PigZombie;
 import org.spout.vanilla.component.entity.living.neutral.Wolf;
 import org.spout.vanilla.component.entity.living.passive.Chicken;
 import org.spout.vanilla.component.entity.living.passive.Cow;
+import org.spout.vanilla.component.entity.living.passive.Horse;
 import org.spout.vanilla.component.entity.living.passive.MooshroomCow;
 import org.spout.vanilla.component.entity.living.passive.Ocelot;
 import org.spout.vanilla.component.entity.living.passive.Pig;
@@ -87,6 +88,8 @@ public class SpawnEgg extends VanillaItemMaterial {
 	public static final SpawnEgg WITCH = new SpawnEgg("Spawn Witch", 66, Witch.class, PARENT);
 	public static final SpawnEgg VILLAGER = new SpawnEgg("Spawn Villager", 120, Villager.class, PARENT);
 	public static final SpawnEgg OCELOT = new SpawnEgg("Spawn Ocelot", 98, Ocelot.class, PARENT);
+	public static final SpawnEgg HORSE = new SpawnEgg("Spawn Horse", 100, Horse.class, PARENT);
+
 	private Class<? extends EntityComponent> entityComponent;
 
 	private SpawnEgg(String name) {

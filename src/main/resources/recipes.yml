@@ -1588,3 +1588,9 @@ recipes:
       B: STICK
       C: REDSTONE_TORCH
     rows: ['ABA', 'ACA', 'ABA']
+
+  Carpet:
+      type: Shapeless
+      result: CARPET
+      ingredients: [WOOL, WOOL]
+      includedata: true

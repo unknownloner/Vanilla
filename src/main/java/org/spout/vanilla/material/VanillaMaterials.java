@@ -154,6 +154,7 @@ import org.spout.vanilla.material.block.solid.Endstone;
 import org.spout.vanilla.material.block.solid.Glass;
 import org.spout.vanilla.material.block.solid.Grass;
 import org.spout.vanilla.material.block.solid.Gravel;
+import org.spout.vanilla.material.block.solid.HayBale;
 import org.spout.vanilla.material.block.solid.Ice;
 import org.spout.vanilla.material.block.solid.IronBarsBlock;
 import org.spout.vanilla.material.block.solid.Leaves;
@@ -191,6 +192,7 @@ import org.spout.vanilla.material.block.stair.StoneBrickStairs;
 import org.spout.vanilla.material.item.BlockItem;
 import org.spout.vanilla.material.item.Food;
 import org.spout.vanilla.material.item.VanillaItemMaterial;
+import org.spout.vanilla.material.item.armor.HorseArmor;
 import org.spout.vanilla.material.item.armor.chain.ChainBoots;
 import org.spout.vanilla.material.item.armor.chain.ChainChestplate;
 import org.spout.vanilla.material.item.armor.chain.ChainHelmet;
@@ -225,6 +227,7 @@ import org.spout.vanilla.material.item.misc.BlazePowder;
 import org.spout.vanilla.material.item.misc.BlazeRod;
 import org.spout.vanilla.material.item.misc.Book;
 import org.spout.vanilla.material.item.misc.BottleOEnchanting;
+import org.spout.vanilla.material.item.misc.Carpet;
 import org.spout.vanilla.material.item.misc.Clay;
 import org.spout.vanilla.material.item.misc.Coal;
 import org.spout.vanilla.material.item.misc.Dye;
@@ -237,7 +240,9 @@ import org.spout.vanilla.material.item.misc.FlowerPot;
 import org.spout.vanilla.material.item.misc.GhastTear;
 import org.spout.vanilla.material.item.misc.GlisteringMelon;
 import org.spout.vanilla.material.item.misc.GlowstoneDust;
+import org.spout.vanilla.material.item.misc.HorseSaddle;
 import org.spout.vanilla.material.item.misc.ItemFrameItem;
+import org.spout.vanilla.material.item.misc.Leash;
 import org.spout.vanilla.material.item.misc.MagmaCream;
 import org.spout.vanilla.material.item.misc.MusicDisc;
 import org.spout.vanilla.material.item.misc.NetherWartItem;
@@ -623,6 +628,15 @@ public final class VanillaMaterials {
 	public static final EnchantedBook ENCHANTED_BOOK = new EnchantedBook("Enchanted Book", 403);
 	public static final VanillaItemMaterial NETHER_BRICK_ITEM = new VanillaItemMaterial("Nether Brick (Item)", 405, null);
 	public static final PotionItem POTION = PotionItem.WATER_BOTTLE;
+	//Horse items
+	public static final HorseArmor IRON_HORSE_ARMOR = new HorseArmor("Iron Horse Armor", 417, 10); //TODO: Real ID & Protection level
+	public static final HorseArmor GOLDEN_HORSE_ARMOR = new HorseArmor("Golden Horse Armor", 418, 20); //TODO: Real ID & Protection level
+	public static final HorseArmor DIAMOND_HORSE_ARMOR = new HorseArmor("Diamond Horse Armor", 419, 30); //TODO: Real ID & Protection level
+	public static final HorseSaddle HORSE_SADDLE = new HorseSaddle("Horse Saddle", 416);
+	public static final HayBale HAY_BALE = new HayBale("Hay Bale", 170);
+	public static final Leash LEASH = new Leash("Leash", 420);
+	public static final Carpet CARPET = Carpet.WHITE_CARPET;
+
 	private static boolean initialized = false;
 	private final static AtomicShortArray conversionTable = new AtomicShortArray(Short.MAX_VALUE);
 	private final static TShortObjectHashMap<Material> reverseTable = new TShortObjectHashMap<Material>(500);

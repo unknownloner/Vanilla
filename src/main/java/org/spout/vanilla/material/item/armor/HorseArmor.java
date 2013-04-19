@@ -24,26 +24,20 @@
  * License and see <http://spout.in/licensev1> for the full license, including
  * the MIT license.
  */
-package org.spout.vanilla.protocol.entity.creature;
+package org.spout.vanilla.material.item.armor;
 
-import java.util.List;
+import org.spout.vanilla.material.item.VanillaItemMaterial;
 
-import org.spout.api.entity.Entity;
-import org.spout.api.util.Parameter;
+public class HorseArmor extends VanillaItemMaterial{
 
-import org.spout.vanilla.component.entity.living.passive.Pig;
+	private int armor;
 
-public class PigEntityProtocol extends CreatureProtocol {
-	public final static int SADDLE_INDEX = 16; // The MC metadata index for determining if the pig is saddled or not.
-
-	public PigEntityProtocol() {
-		super(CreatureType.PIG);
+	public HorseArmor(String name, int id, int armor) {
+		super(name, id, null); //TODO: Get the real item ID
+		this.armor = armor;
 	}
 
-	@Override
-	public List<Parameter<?>> getSpawnParameters(Entity entity) {
-		List<Parameter<?>> parameters = super.getSpawnParameters(entity);
-		parameters.add(new Parameter<Byte>(Parameter.TYPE_BYTE, SADDLE_INDEX, (byte) (entity.add(Pig.class).isSaddled() ? 1 : 0)));
-		return parameters;
+	public int getArmorValue() {
+		return armor;
 	}
 }
