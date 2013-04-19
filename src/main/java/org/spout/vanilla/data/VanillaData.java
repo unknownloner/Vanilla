@@ -123,8 +123,8 @@ public class VanillaData {
 	public static final DefaultedKey<Boolean> IS_FLYING = new DefaultedKeyImpl<Boolean>("is_flying", false);
 	public static final DefaultedKey<Boolean> CAN_FLY = new DefaultedKeyImpl<Boolean>("can_fly", false);
 	public static final DefaultedKey<Boolean> GOD_MODE = new DefaultedKeyImpl<Boolean>("god_mode", false);
-	public static final DefaultedKey<Number> FLYING_SPEED = new DefaultedKeyImpl<Number>("flying_speed",  1.0f);
-	public static final DefaultedKey<Number> WALKING_SPEED = new DefaultedKeyImpl<Number>("walking_speed", 1.0f);
+	public static final DefaultedKey<Number> FLYING_SPEED = new DefaultedKeyImpl<Number>("flying_speed",  0.1f);
+	public static final DefaultedKey<Number> WALKING_SPEED = new DefaultedKeyImpl<Number>("walking_speed", 0.1f);
 	public static final DefaultedKey<ViewDistance> VIEW_DISTANCE = new DefaultedKeyImpl<ViewDistance>("view_distance", ViewDistance.NORMAL);
 	//Creature-specific
 	public static final DefaultedKey<Integer> LINE_OF_SIGHT = new DefaultedKeyImpl<Integer>("line_of_sight", 1);
