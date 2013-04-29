@@ -26,7 +26,6 @@
  */
 package org.spout.vanilla.world.lighting;
 
-import org.spout.api.Spout;
 import org.spout.api.geo.cuboid.Chunk;
 import org.spout.api.material.BlockMaterial;
 import org.spout.api.math.IntVector3;

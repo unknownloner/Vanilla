@@ -26,11 +26,11 @@
  */
 package org.spout.vanilla.world.lighting;
 
-import gnu.trove.iterator.hash.TObjectHashIterator;
-
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Iterator;
+
+import gnu.trove.iterator.hash.TObjectHashIterator;
 
 import org.spout.api.Spout;
 import org.spout.api.geo.cuboid.Chunk;

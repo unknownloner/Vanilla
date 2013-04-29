@@ -797,7 +797,7 @@ public class VanillaNetworkSynchronizer extends NetworkSynchronizer implements P
 	@EventHandler
 	public Message onObjectiveAction(ObjectiveActionEvent event) {
 		Objective obj = event.getObjective();
-		return new ScoreboardObjectiveMessage(obj.getName(), obj.getDisplayName().asString(), event.getAction());
+		return new ScoreboardObjectiveMessage(obj.getName(), obj.getDisplayName(), event.getAction());
 	}
 
 	@EventHandler
@@ -815,8 +815,8 @@ public class VanillaNetworkSynchronizer extends NetworkSynchronizer implements P
 		Team team = event.getTeam();
 		return new ScoreboardTeamMessage(
 				team.getName(), event.getAction(),
-				team.getDisplayName().asString(),
-				team.getPrefix().asString(), team.getSuffix().asString(),
+				team.getDisplayName(),
+				team.getPrefix(), team.getSuffix(),
 				team.isFriendlyFire(), event.getPlayers()
 		);
 	}

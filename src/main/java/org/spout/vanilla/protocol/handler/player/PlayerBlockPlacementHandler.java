@@ -30,7 +30,6 @@ import java.util.Collection;
 import java.util.logging.Level;
 
 import org.spout.api.Spout;
-import org.spout.api.chat.style.ChatStyle;
 import org.spout.api.entity.Player;
 import org.spout.api.event.Cause;
 import org.spout.api.event.EventManager;
@@ -53,6 +52,7 @@ import org.spout.api.protocol.MessageHandler;
 import org.spout.api.protocol.Session;
 import org.spout.api.protocol.reposition.RepositionManager;
 
+import org.spout.vanilla.ChatStyle;
 import org.spout.vanilla.VanillaPlugin;
 import org.spout.vanilla.component.entity.living.Living;
 import org.spout.vanilla.component.entity.misc.Head;
@@ -233,7 +233,7 @@ public final class PlayerBlockPlacementHandler extends MessageHandler<PlayerBloc
 				for (Protection p : protections) {
 					if (p.contains(placedBlock.getPosition()) && !VanillaConfiguration.OPS.isOp(player.getName())) {
 						refreshClient(player, clickedBlock, clickedFace, rm);
-						player.sendMessage(ChatStyle.DARK_RED, "This area is a protected spawn point!");
+						player.sendMessage(ChatStyle.DARK_RED + "This area is a protected spawn point!");
 						return;
 					}
 				}
