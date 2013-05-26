@@ -38,7 +38,7 @@ public class Carpet extends Solid implements Burnable {
 	public static final Carpet WHITE_CARPET = new Carpet("White Carpet", null);
 	public static final Carpet ORANGE_CARPET = new Carpet("Orange Carpet", WoolColor.ORANGE, WHITE_CARPET, null);
 	public static final Carpet MAGENTA_CARPET = new Carpet("Magenta Carpet", WoolColor.MAGENTA, WHITE_CARPET, null);
-	public static final Carpet LIGHTBLUE_CARPET = new Carpet("Light Blue Carpet", WoolColor.LIGHTBLUE, WHITE_CARPET, null);
+	public static final Carpet LIGHT_BLUE_CARPET = new Carpet("Light Blue Carpet", WoolColor.LIGHTBLUE, WHITE_CARPET, null);
 	public static final Carpet YELLOW_CARPET = new Carpet("Yellow Carpet", WoolColor.YELLOW, WHITE_CARPET, null);
 	public static final Carpet LIME_CARPET = new Carpet("Lime Carpet", WoolColor.LIME, WHITE_CARPET, null);
 	public static final Carpet PINK_CARPET = new Carpet("Pink Carpet", WoolColor.PINK, WHITE_CARPET, null);

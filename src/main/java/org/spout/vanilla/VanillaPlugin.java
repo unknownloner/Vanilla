@@ -100,7 +100,7 @@ import org.spout.vanilla.world.lighting.VanillaLighting;
 
 public class VanillaPlugin extends CommonPlugin {
 
-	public static final int MINECRAFT_PROTOCOL_ID = 62;
+	public static final int MINECRAFT_PROTOCOL_ID = 67;
 	public static final int VANILLA_PROTOCOL_ID = NetworkComponent.getProtocolId("org.spout.vanilla.plugin.protocol");
 	protected static VanillaPlugin instance;
 	private VanillaConfiguration config;

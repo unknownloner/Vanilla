@@ -24,39 +24,13 @@
  * License and see <http://spout.in/licensev1> for the full license, including
  * the MIT license.
  */
-package org.spout.vanilla.material.block.solid;
+package org.spout.vanilla.material.item.misc;
 
-import org.spout.api.inventory.ItemStack;
+import org.spout.vanilla.material.item.VanillaItemMaterial;
 
-import org.spout.vanilla.data.effect.store.SoundEffects;
-import org.spout.vanilla.data.resources.VanillaMaterialModels;
-import org.spout.vanilla.data.tool.ToolType;
-import org.spout.vanilla.material.InitializableMaterial;
-import org.spout.vanilla.material.TimedCraftable;
-import org.spout.vanilla.material.VanillaMaterials;
-import org.spout.vanilla.material.block.Solid;
-import org.spout.vanilla.material.block.component.FurnaceBlock;
+public class NameTag extends VanillaItemMaterial{
 
-public class ClayBlock extends Solid implements InitializableMaterial, TimedCraftable {
-	public ClayBlock(String name, int id) {
-		super(name, id, VanillaMaterialModels.CLAY_BLOCK);
-		this.setHardness(0.6F).setResistance(1.0F).setStepSound(SoundEffects.STEP_GRAVEL);
-		this.addMiningType(ToolType.SPADE);
-	}
-
-	@Override
-	public void initialize() {
-		getDrops().DEFAULT.clear().add(VanillaMaterials.CLAY, 4);
-		getDrops().SILK_TOUCH.add(VanillaMaterials.CLAY_BLOCK);
-	}
-
-	@Override
-	public ItemStack getResult() {
-		return new ItemStack(VanillaMaterials.HARDENED_CLAY,1);
-	}
-
-	@Override
-	public float getCraftTime() {
-		return FurnaceBlock.SMELT_TIME;
+	public NameTag(String name, int id) {
+		super(name, id, null);
 	}
 }

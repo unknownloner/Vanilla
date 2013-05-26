@@ -78,10 +78,12 @@ import org.spout.vanilla.material.block.misc.FenceGate;
 import org.spout.vanilla.material.block.misc.Fire;
 import org.spout.vanilla.material.block.misc.FlowerPotBlock;
 import org.spout.vanilla.material.block.misc.GlassPane;
+import org.spout.vanilla.material.block.misc.HardenedClay;
 import org.spout.vanilla.material.block.misc.Ladder;
 import org.spout.vanilla.material.block.misc.Lever;
 import org.spout.vanilla.material.block.misc.Slab;
 import org.spout.vanilla.material.block.misc.Snow;
+import org.spout.vanilla.material.block.misc.StainedClay;
 import org.spout.vanilla.material.block.misc.StoneButton;
 import org.spout.vanilla.material.block.misc.TntBlock;
 import org.spout.vanilla.material.block.misc.Torch;
@@ -245,6 +247,7 @@ import org.spout.vanilla.material.item.misc.ItemFrameItem;
 import org.spout.vanilla.material.item.misc.Leash;
 import org.spout.vanilla.material.item.misc.MagmaCream;
 import org.spout.vanilla.material.item.misc.MusicDisc;
+import org.spout.vanilla.material.item.misc.NameTag;
 import org.spout.vanilla.material.item.misc.NetherWartItem;
 import org.spout.vanilla.material.item.misc.PaintingItem;
 import org.spout.vanilla.material.item.misc.Sign;
@@ -636,6 +639,10 @@ public final class VanillaMaterials {
 	public static final HayBale HAY_BALE = new HayBale("Hay Bale", 170);
 	public static final Leash LEASH = new Leash("Leash", 420);
 	public static final Carpet CARPET = Carpet.WHITE_CARPET;
+
+	public static final NameTag NAME_TAG = new NameTag("Name Tag", 421);
+	public static final HardenedClay HARDENED_CLAY = new HardenedClay("Hardened Clay", 172);
+	public static final StainedClay STAINED_CLAY = StainedClay.WHITE_STAINED_CLAY;
 
 	private static boolean initialized = false;
 	private final static AtomicShortArray conversionTable = new AtomicShortArray(Short.MAX_VALUE);

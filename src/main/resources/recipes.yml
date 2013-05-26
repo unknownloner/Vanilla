@@ -1589,8 +1589,41 @@ recipes:
       C: REDSTONE_TORCH
     rows: ['ABA', 'ACA', 'ABA']
 
-  Carpet:
+  White Carpet:
       type: Shapeless
-      result: CARPET
-      ingredients: [WOOL, WOOL]
+      result: WHITE_CARPET,1
+      ingredient: [WHITE_WOOL, WHITE_WOOL]
+
+  Orange Carpet:
+        type: Shapeless
+        result: ORANGE_CARPET,1
+        ingredient: [ORANGE_WOOL, ORANGE_WOOL]
+
+  Magenta Carpet:
+        type: Shapeless
+        result: MAGENTA_CARPET,1
+        ingredient: [MAGENTA_WOOL, MAGENTA_WOOL]
+
+  Light Blue Carpet:
+        type: Shapeless
+        result: LIGHT_BLUE_CARPET,1
+        ingredient: [LIGHT_BLUE_WOOL, LIGHT_BLUE_WOOL]
+
+  Yellow Carpet:
+        type: Shapeless
+        result: YELLOW_CARPET,1
+        ingredient: [YELLOW_WOOL, YELLOW_WOOL]
+
+  Lime Carpet:
+        type: Shapeless
+        result: LIME_CARPET,1
+        ingredient: [LIME_WOOL, LIME_WOOL]
+
+  Stained Clay:
+      type: Shaped
+      result: STAINED_CLAY, 8
+      ingredients:
+        A: DYE
+        B: HARDENED_CLAY
+      rows: ['BBB', 'BAB', 'BBB']
       includedata: true
