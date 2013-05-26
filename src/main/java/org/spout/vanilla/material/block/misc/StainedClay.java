@@ -51,13 +51,13 @@ public class StainedClay extends Solid {
 	private final Wool.WoolColor color;
 
 	private StainedClay(String name, String model) {
-		super((short) 0x000F, name, 171, model);
+		super((short) 0x000F, name, 159, model);
 		this.color = Wool.WoolColor.WHITE;
 		this.setHardness(0.8F).setResistance(1.3F).setStepSound(SoundEffects.STEP_CLOTH);
 	}
 
 	private StainedClay(String name, Wool.WoolColor color, StainedClay parent, String model) {
-		super(name, 171, color.getData(), parent, model);
+		super(name, 159, color.getData(), parent, model);
 		this.color = color;
 		this.setHardness(0.8F).setResistance(1.3F).setStepSound(SoundEffects.STEP_CLOTH);
 	}

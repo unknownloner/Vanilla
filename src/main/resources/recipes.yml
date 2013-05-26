@@ -1590,40 +1590,253 @@ recipes:
     rows: ['ABA', 'ACA', 'ABA']
 
   White Carpet:
-      type: Shapeless
-      result: WHITE_CARPET,1
-      ingredient: [WHITE_WOOL, WHITE_WOOL]
+    type: Shapeless
+    result: WHITE_CARPET,3
+    ingredients: [WHITE_WOOL, WHITE_WOOL]
+    includedata: true
 
   Orange Carpet:
-        type: Shapeless
-        result: ORANGE_CARPET,1
-        ingredient: [ORANGE_WOOL, ORANGE_WOOL]
+    type: Shapeless
+    result: ORANGE_CARPET,3
+    ingredients: [ORANGE_WOOL, ORANGE_WOOL]
+    includedata: true
 
   Magenta Carpet:
-        type: Shapeless
-        result: MAGENTA_CARPET,1
-        ingredient: [MAGENTA_WOOL, MAGENTA_WOOL]
+    type: Shapeless
+    result: MAGENTA_CARPET,3
+    ingredients: [MAGENTA_WOOL, MAGENTA_WOOL]
+    includedata: true
 
   Light Blue Carpet:
-        type: Shapeless
-        result: LIGHT_BLUE_CARPET,1
-        ingredient: [LIGHT_BLUE_WOOL, LIGHT_BLUE_WOOL]
+    type: Shapeless
+    result: LIGHT_BLUE_CARPET,3
+    ingredients: [LIGHT_BLUE_WOOL, LIGHT_BLUE_WOOL]
+    includedata: true
 
   Yellow Carpet:
-        type: Shapeless
-        result: YELLOW_CARPET,1
-        ingredient: [YELLOW_WOOL, YELLOW_WOOL]
+    type: Shapeless
+    result: YELLOW_CARPET,3
+    ingredients: [YELLOW_WOOL, YELLOW_WOOL]
+    includedata: true
 
   Lime Carpet:
-        type: Shapeless
-        result: LIME_CARPET,1
-        ingredient: [LIME_WOOL, LIME_WOOL]
+    type: Shapeless
+    result: LIME_CARPET,3
+    ingredients: [LIME_WOOL, LIME_WOOL]
+    includedata: true
 
-  Stained Clay:
+  Pink Carpet:
+    type: Shapeless
+    result: PINK_CARPET,3
+    ingredients: [PINK_WOOL, PINK_WOOL]
+    includedata: true
+
+  Gray Carpet:
+    type: Shapeless
+    result: GRAY_CARPET,3
+    ingredients: [GRAY_WOOL, GRAY_WOOL]
+    includedata: true
+
+  Light Gray Carpet:
+    type: Shapeless
+    result: LIGHT_GRAY_CARPET,3
+    ingredients: [LIGHT_GRAY_WOOL, LIGHT_GRAY_WOOL]
+    includedata: true
+
+  Cyan Carpet:
+    type: Shapeless
+    result: CYAN_CARPET,3
+    ingredients: [CYAN_WOOL, CYAN_WOOL]
+    includedata: true
+
+  Purple Carpet:
+    type: Shapeless
+    result: PURPLE_CARPET,3
+    ingredients: [PURPLE_WOOL, PURPLE_WOOL]
+    includedata: true
+
+  Blue Carpet:
+    type: Shapeless
+    result: BLUE_CARPET,3
+    ingredients: [BLUE_WOOL, BLUE_WOOL]
+    includedata: true
+
+  Brown Carpet:
+    type: Shapeless
+    result: BROWN_CARPET,3
+    ingredients: [BROWN_WOOL, BROWN_WOOL]
+    includedata: true
+
+  Green Carpet:
+    type: Shapeless
+    result: GREEN_CARPET,3
+    ingredients: [GREEN_WOOL, GREEN_WOOL]
+    includedata: true
+
+  Red Carpet:
+    type: Shapeless
+    result: RED_CARPET,3
+    ingredients: [RED_WOOL, RED_WOOL]
+    includedata: true
+
+  Green Carpet:
+    type: Shapeless
+    result: GREEN_CARPET,3
+    ingredients: [GREEN_WOOL, GREEN_WOOL]
+    includedata: true
+
+  Hardened Clay:
+      type: Smelted
+      result: HARDENED_CLAY,1
+      ingredients: [CLAY_BLOCK]
+
+  White Stained Clay:
       type: Shaped
-      result: STAINED_CLAY, 8
+      result: WHITE_STAINED_CLAY,8
       ingredients:
-        A: DYE
+        A: BONE_MEAL
         B: HARDENED_CLAY
       rows: ['BBB', 'BAB', 'BBB']
       includedata: true
+
+  Orange Stained Clay:
+      type: Shaped
+      result: ORANGE_STAINED_CLAY,8
+      ingredients:
+        A: ORANGE_DYE
+        B: HARDENED_CLAY
+      rows: ['BBB', 'BAB', 'BBB']
+      includedata: true
+
+  Magenta Stained Clay:
+      type: Shaped
+      result: MAGENTA_STAINED_CLAY,8
+      ingredients:
+        A: MAGENTA_DYE
+        B: HARDENED_CLAY
+      rows: ['BBB', 'BAB', 'BBB']
+      includedata: true
+
+  Light Blue Stained Clay:
+      type: Shaped
+      result: LIGHT_BLUE_STAINED_CLAY,8
+      ingredients:
+        A: LIGHT_BLUE_DYE
+        B: HARDENED_CLAY
+      rows: ['BBB', 'BAB', 'BBB']
+      includedata: true
+
+  Yellow Stained Clay:
+      type: Shaped
+      result: YELLOW_STAINED_CLAY,8
+      ingredients:
+        A: DANDELION_YELLOW
+        B: HARDENED_CLAY
+      rows: ['BBB', 'BAB', 'BBB']
+      includedata: true
+
+  Lime Stained Clay:
+      type: Shaped
+      result: LIME_STAINED_CLAY,8
+      ingredients:
+        A: LIME_DYE
+        B: HARDENED_CLAY
+      rows: ['BBB', 'BAB', 'BBB']
+      includedata: true
+
+  Pink Stained Clay:
+      type: Shaped
+      result: PINK_STAINED_CLAY,8
+      ingredients:
+        A: PINK_DYE
+        B: HARDENED_CLAY
+      rows: ['BBB', 'BAB', 'BBB']
+      includedata: true
+
+  Gray Stained Clay:
+      type: Shaped
+      result: GRAY_STAINED_CLAY,8
+      ingredients:
+        A: GRAY_DYE
+        B: HARDENED_CLAY
+      rows: ['BBB', 'BAB', 'BBB']
+      includedata: true
+
+  Light Gray Stained Clay:
+      type: Shaped
+      result: LIGHT_GRAY_STAINED_CLAY,8
+      ingredients:
+        A: LIGHT_GRAY_DYE
+        B: HARDENED_CLAY
+      rows: ['BBB', 'BAB', 'BBB']
+      includedata: true
+
+  Cyan Stained Clay:
+      type: Shaped
+      result: CYAN_STAINED_CLAY,8
+      ingredients:
+        A: CYAN_DYE
+        B: HARDENED_CLAY
+      rows: ['BBB', 'BAB', 'BBB']
+      includedata: true
+
+  Purple Stained Clay:
+      type: Shaped
+      result: PURPLE_STAINED_CLAY,8
+      ingredients:
+        A: PURPLE_DYE
+        B: HARDENED_CLAY
+      rows: ['BBB', 'BAB', 'BBB']
+      includedata: true
+
+  Blue Stained Clay:
+      type: Shaped
+      result: BLUE_STAINED_CLAY,8
+      ingredients:
+        A: LAPIS_LAZULI
+        B: HARDENED_CLAY
+      rows: ['BBB', 'BAB', 'BBB']
+      includedata: true
+
+  Brown Stained Clay:
+      type: Shaped
+      result: BROWN_STAINED_CLAY,8
+      ingredients:
+        A: COCOA_BEANS
+        B: HARDENED_CLAY
+      rows: ['BBB', 'BAB', 'BBB']
+      includedata: true
+
+  Green Stained Clay:
+      type: Shaped
+      result: GREEN_STAINED_CLAY,8
+      ingredients:
+        A: CACTUS_GREEN
+        B: HARDENED_CLAY
+      rows: ['BBB', 'BAB', 'BBB']
+      includedata: true
+
+  Red Stained Clay:
+      type: Shaped
+      result: RED_STAINED_CLAY,8
+      ingredients:
+        A: ROSE_RED
+        B: HARDENED_CLAY
+      rows: ['BBB', 'BAB', 'BBB']
+      includedata: true
+
+  Black Stained Clay:
+      type: Shaped
+      result: BLACK_STAINED_CLAY,8
+      ingredients:
+        A: INK_SAC
+        B: HARDENED_CLAY
+      rows: ['BBB', 'BAB', 'BBB']
+      includedata: true
+
+  Hay Bale:
+    type: Shaped
+    result: HAY_BALE,1
+    ingredients:
+      A: WHEAT
+    rows: ['AAA', 'AAA', 'AAA']
