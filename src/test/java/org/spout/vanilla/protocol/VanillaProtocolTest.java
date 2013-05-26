@@ -56,6 +56,7 @@ import org.spout.vanilla.protocol.msg.entity.EntityItemDataMessage;
 import org.spout.vanilla.protocol.msg.entity.EntityMetadataMessage;
 import org.spout.vanilla.protocol.msg.entity.EntityStatusMessage;
 import org.spout.vanilla.protocol.msg.entity.EntityTileDataMessage;
+import org.spout.vanilla.protocol.msg.entity.SteerVehicleMessage;
 import org.spout.vanilla.protocol.msg.entity.effect.EntityEffectMessage;
 import org.spout.vanilla.protocol.msg.entity.effect.EntityRemoveEffectMessage;
 import org.spout.vanilla.protocol.msg.entity.pos.EntityHeadYawMessage;
@@ -168,7 +169,7 @@ public class VanillaProtocolTest extends BaseProtocolTest {
 			new EntityTeleportMessage(1, 2, 3, 4, 5, 6),
 			new EntityHeadYawMessage(45, 3),
 			new EntityStatusMessage(1, (byte) 2),
-			new EntityAttachEntityMessage(1, 2, 1),
+			new EntityAttachEntityMessage(1, 2, false),
 			new EntityMetadataMessage(1, TEST_PARAMS),
 			new EntityEffectMessage(1, (byte) 1, (byte) 1, (short) 34),
 			new EntityRemoveEffectMessage(1, (byte) 1),
@@ -209,7 +210,8 @@ public class VanillaProtocolTest extends BaseProtocolTest {
 			new ScoreboardScoreMessage("item", false, "boardName", 5),
 			new ScoreboardDisplayMessage((byte) 1, "name"),
 			new ScoreboardTeamMessage("teamName", (byte) 0, "displayName", "prefix", "suffix", false, null),
-			new BlockBreakAnimationMessage(1, 1, 1, 1, (byte) 2, NullRepositionManager.getInstance())
+			new BlockBreakAnimationMessage(1, 1, 1, 1, (byte) 2, NullRepositionManager.getInstance()),
+			new SteerVehicleMessage(0.5f,0.6f,false, false)
 	};
 
 	static {

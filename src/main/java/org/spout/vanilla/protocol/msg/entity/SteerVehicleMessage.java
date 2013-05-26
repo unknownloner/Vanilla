@@ -28,51 +28,45 @@ package org.spout.vanilla.protocol.msg.entity;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
-import org.spout.api.protocol.Message;
-import org.spout.api.protocol.proxy.ConnectionInfo;
 import org.spout.api.util.SpoutToStringStyle;
 
-import org.spout.vanilla.protocol.proxy.VanillaConnectionInfo;
+import org.spout.vanilla.protocol.msg.VanillaMainChannelMessage;
 
-public final class EntityAttachEntityMessage extends EntityMessage {
-	private int vehicle;
-	private boolean leashed;
+public class SteerVehicleMessage extends VanillaMainChannelMessage {
 
-	public EntityAttachEntityMessage(int id, int vehicle, boolean leashed) {
-		super(id);
-		this.vehicle = vehicle;
-		this.leashed = leashed;
+	private final float sideways, forward;
+	private final boolean jump, unmount;
+
+	public SteerVehicleMessage(float sideways, float forward, boolean jump, boolean unmount) {
+		this.sideways = sideways;
+		this.forward = forward;
+		this.jump = jump;
+		this.unmount = unmount;
 	}
 
-	@Override
-	public Message transform(boolean upstream, int connects, ConnectionInfo info, ConnectionInfo auxChannelInfo) {
-		super.transform(upstream, connects, info, auxChannelInfo);
-		if (vehicle == ((VanillaConnectionInfo) info).getEntityId()) {
-			vehicle = ((VanillaConnectionInfo) auxChannelInfo).getEntityId();
-		} else if (vehicle == ((VanillaConnectionInfo) auxChannelInfo).getEntityId()) {
-			vehicle = ((VanillaConnectionInfo) info).getEntityId();
-		}
-		return this;
+	public float getSideways() {
+		return sideways;
 	}
 
-	public boolean isLeashed() {
-		return leashed;
+	public boolean isUnmount() {
+		return unmount;
 	}
 
-	public void setLeashed(boolean leashed) {
-		this.leashed = leashed;
+	public boolean isJumping() {
+		return jump;
 	}
 
-	public int getVehicle() {
-		return vehicle;
+	public float getForward() {
+		return forward;
 	}
 
 	@Override
 	public String toString() {
 		return new ToStringBuilder(this, SpoutToStringStyle.INSTANCE)
-				.append("id", this.getEntityId())
-				.append("vehicle", vehicle)
-				.append("leashed", leashed)
+				.append("sideways", this.getSideways())
+				.append("unmount", this.isUnmount())
+				.append("jump", this.isJumping())
+				.append("forward", this.getForward())
 				.toString();
 	}
 
@@ -84,11 +78,11 @@ public final class EntityAttachEntityMessage extends EntityMessage {
 		if (getClass() != obj.getClass()) {
 			return false;
 		}
-		final EntityAttachEntityMessage other = (EntityAttachEntityMessage) obj;
+		final SteerVehicleMessage other = (SteerVehicleMessage) obj;
 		return new org.apache.commons.lang3.builder.EqualsBuilder()
-				.append(this.getEntityId(), other.getEntityId())
-				.append(this.vehicle, other.vehicle)
-				.append(this.leashed, other.leashed)
+				.append(this.getSideways(), other.getSideways())
+				.append(this.isUnmount(), other.isUnmount())
+				.append(this.isJumping(), other.isJumping())
+				.append(this.getForward(), other.getForward())
 				.isEquals();
-	}
-}
+	}}

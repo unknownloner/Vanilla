@@ -33,27 +33,30 @@ import org.jboss.netty.buffer.ChannelBuffers;
 
 import org.spout.api.protocol.MessageCodec;
 
-import org.spout.vanilla.protocol.msg.entity.EntityAttachEntityMessage;
+import org.spout.vanilla.protocol.msg.entity.SteerVehicleMessage;
 
-public final class EntityAttachEntityCodec extends MessageCodec<EntityAttachEntityMessage> {
-	public EntityAttachEntityCodec() {
-		super(EntityAttachEntityMessage.class, 0x27);
+public class SteerVehicleCodec extends MessageCodec<SteerVehicleMessage> {
+
+	public SteerVehicleCodec() {
+		super(SteerVehicleMessage.class, 0x1B);
 	}
 
 	@Override
-	public EntityAttachEntityMessage decode(ChannelBuffer buffer) throws IOException {
-		int id = buffer.readInt();
-		int vehicle = buffer.readInt();
-		boolean leash = buffer.readByte() != 0;
-		return new EntityAttachEntityMessage(id, vehicle, leash);
+	public SteerVehicleMessage decode(ChannelBuffer buffer) throws IOException {
+		float sideways = buffer.readFloat();
+		float forward = buffer.readFloat();
+		boolean jump = buffer.readByte() != 0;
+		boolean unmount = buffer.readByte() != 0;
+		return new SteerVehicleMessage(sideways, forward, jump, unmount);
 	}
 
 	@Override
-	public ChannelBuffer encode(EntityAttachEntityMessage message) throws IOException {
-		ChannelBuffer buffer = ChannelBuffers.buffer(13);
-		buffer.writeInt(message.getEntityId());
-		buffer.writeInt(message.getVehicle());
-		buffer.writeInt(message.isLeashed() ? 1 : 0);
+	public ChannelBuffer encode(SteerVehicleMessage message) throws IOException {
+		ChannelBuffer buffer = ChannelBuffers.buffer(11);
+		buffer.writeFloat(message.getSideways());
+		buffer.writeFloat(message.getForward());
+		buffer.writeByte(message.isJumping() ? 1 : 0);
+		buffer.writeByte(message.isUnmount() ? 1 : 0);
 		return buffer;
 	}
 }

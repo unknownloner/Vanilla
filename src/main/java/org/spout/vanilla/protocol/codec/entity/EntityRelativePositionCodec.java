@@ -36,6 +36,7 @@ import org.spout.api.protocol.MessageCodec;
 import org.spout.vanilla.protocol.msg.entity.pos.EntityRelativePositionMessage;
 
 public final class EntityRelativePositionCodec extends MessageCodec<EntityRelativePositionMessage> {
+
 	public EntityRelativePositionCodec() {
 		super(EntityRelativePositionMessage.class, 0x1F);
 	}

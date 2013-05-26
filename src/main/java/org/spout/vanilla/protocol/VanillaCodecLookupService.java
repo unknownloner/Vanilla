@@ -41,6 +41,7 @@ import org.spout.vanilla.protocol.codec.entity.EntityMetadataCodec;
 import org.spout.vanilla.protocol.codec.entity.EntityRelativePositionCodec;
 import org.spout.vanilla.protocol.codec.entity.EntityStatusCodec;
 import org.spout.vanilla.protocol.codec.entity.EntityTileDataCodec;
+import org.spout.vanilla.protocol.codec.entity.SteerVehicleCodec;
 import org.spout.vanilla.protocol.codec.entity.effect.EntityEffectCodec;
 import org.spout.vanilla.protocol.codec.entity.effect.EntityRemoveEffectCodec;
 import org.spout.vanilla.protocol.codec.entity.pos.EntityHeadYawCodec;
@@ -166,6 +167,8 @@ public class VanillaCodecLookupService extends CodecLookupService {
 			bind(EntityPaintingCodec.class);
 			/* 0x1A */
 			bind(EntityExperienceOrbCodec.class);
+			/* 0x1B */
+			bind(SteerVehicleCodec.class);
 			/* 0x1C */
 			bind(EntityVelocityCodec.class);
 			/* 0x1D */
