@@ -24,47 +24,19 @@
  * License and see <http://spout.in/licensev1> for the full license, including
  * the MIT license.
  */
-package org.spout.vanilla.material.block.component;
+package org.spout.vanilla.material.block.ore;
 
-import org.spout.api.geo.cuboid.Block;
-import org.spout.api.material.BlockMaterial;
+import org.spout.vanilla.material.Fuel;
+import org.spout.vanilla.material.block.Solid;
 
-import org.spout.vanilla.component.block.material.CommandBlock;
-import org.spout.vanilla.data.MoveReaction;
-import org.spout.vanilla.material.VanillaBlockMaterial;
-import org.spout.vanilla.material.block.redstone.RedstoneTarget;
-import org.spout.vanilla.util.RedstoneUtil;
+public class CoalBlock extends Solid implements Fuel{
 
-public class CommandBlockBlock extends VanillaBlockMaterial implements RedstoneTarget {
-	public CommandBlockBlock(String name, int id) {
-		super(name, id, null, CommandBlock.class);
-		this.getDrops().NOT_CREATIVE.clear();
+	public CoalBlock(String name, int id) {
+		super(name, id, null);
 	}
 
 	@Override
-	public void onUpdate(BlockMaterial oldMaterial, Block block) {
-		super.onUpdate(oldMaterial, block);
-		CommandBlock cmdBlock = block.get(CommandBlock.class);
-		cmdBlock.setPowered(isReceivingPower(block));
-	}
-
-	@Override
-	public boolean hasPhysics() {
-		return true;
-	}
-
-	@Override
-	public MoveReaction getMoveReaction(Block block) {
-		return MoveReaction.DENY;
-	}
-
-	@Override
-	public boolean isPlacementSuppressed() {
-		return true;
-	}
-
-	@Override
-	public boolean isReceivingPower(Block block) {
-		return RedstoneUtil.isReceivingPower(block);
+	public float getFuelTime() {
+		return 800;
 	}
 }

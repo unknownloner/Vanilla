@@ -92,6 +92,7 @@ import org.spout.vanilla.material.block.misc.TripWire;
 import org.spout.vanilla.material.block.misc.TripWireHook;
 import org.spout.vanilla.material.block.misc.Web;
 import org.spout.vanilla.material.block.misc.WoodButton;
+import org.spout.vanilla.material.block.ore.CoalBlock;
 import org.spout.vanilla.material.block.ore.CoalOre;
 import org.spout.vanilla.material.block.ore.DiamondBlock;
 import org.spout.vanilla.material.block.ore.DiamondOre;
@@ -641,6 +642,7 @@ public final class VanillaMaterials {
 	public static final NameTag NAME_TAG = new NameTag("Name Tag", 421);
 	public static final HardenedClay HARDENED_CLAY = new HardenedClay("Hardened Clay", 172);
 	public static final StainedClay STAINED_CLAY = StainedClay.WHITE_STAINED_CLAY;
+	public static final CoalBlock COAL_BLOCK = new CoalBlock("Coal Block", 173);
 
 	private static boolean initialized = false;
 	private final static AtomicShortArray conversionTable = new AtomicShortArray(Short.MAX_VALUE);

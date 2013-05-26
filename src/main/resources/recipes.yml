@@ -1840,3 +1840,23 @@ recipes:
     ingredients:
       A: WHEAT
     rows: ['AAA', 'AAA', 'AAA']
+
+  Coal Block:
+    type: Shaped
+    result: COAL_BLOCK,1
+    ingredients:
+      A: COAL
+    rows: ['AAA', 'AAA', 'AAA']
+
+  Coal:
+    type: Shapeless
+    result: COAL,9
+    ingredients: [COAL_BLOCK]
+
+  Leash:
+    type: Shaped
+    result: LEASH,2
+    ingredients:
+      A: STRING
+      B: SLIMEBALL
+    rows: ['AA ','AB ','  A']
